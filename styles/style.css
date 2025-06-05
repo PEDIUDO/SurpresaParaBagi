@@ -1,0 +1,353 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Lavishly+Yours&display=swap');
+/* Criação de variáveis */
+:root {
+    --cor-principal: #fec7d7;
+    --cor-secundaria: #fffffe;
+    --cor-terciaria: #a786df;
+    --cor-paragrafos: #0E172C;
+}
+
+/* Reset da página */
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    padding: 0 6%;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    width: 100%;
+    min-height: 15rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    font-optical-sizing: auto;
+    overflow: hidden;
+}
+
+.cabecalho-navegacao {
+    display: flex;
+    flex-direction: column;
+    max-width: 45.25rem;
+    width: 100%;
+    min-height: 14.23rem;
+    gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.cabecalho-navegacao-texto {
+    width: 100%;
+    text-align: center;
+    height: 3.88rem;
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.5rem;
+}
+
+.cabecalho-navegacao-img {
+    display: flex;
+    max-width: 45.25rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.cabecalho-navegacao-img-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--cor-terciaria);
+    border: 0.125rem solid var(--cor-terciaria);
+    width: 7.5rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    box-shadow: 0.25rem 0.25rem 0.5rem #a0a0a0;
+}
+
+.cabecalho-navegacao-img-botao:hover {
+    background-color: #856bb2;
+    border: 0.125rem solid #856bb2;
+}
+
+.cabecalho-navegacao-coracao-invertido {
+    transform: scaleX(-1);
+}
+
+.conteudo {
+    background: linear-gradient(45deg, #EC7FA9,#F0A8D0, #FFB8E0,#F7B5CA, #fec7d7);
+    background-size: 300% 300%;
+    width: 100vw; /* Garante que o fundo cubra toda a largura da viewport */
+    min-width: 100vw; /* Evita que o fundo seja cortado */
+    border-top: 0.25rem solid var(--cor-paragrafos);
+    min-height: 96rem;
+    animation: color 4s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.secao-imagens {
+    padding: 6% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 34rem;
+    max-width: 100%;
+}
+
+.coracoes {
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.secao-imagens-coracaofofo {
+    rotate: -15deg;
+    transform: translateY(0.5rem);
+}
+
+.secao-imagens-coracaokwai {
+    rotate: 15deg;
+    transform: translateY(0.5rem);
+}
+
+.secao-imagens-carrossel {
+    width: 39.7rem;
+    height: 30.7rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid var(--cor-paragrafos);
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--cor-principal);
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-fade .carousel-item {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.secao-video {
+    padding: 7% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    min-height: 34rem;
+    max-width: 100%;
+}
+
+.secao-video-coracaofofo {
+    rotate: 15deg;
+}
+
+.secao-video-player {
+    width: 39.7rem;
+    height: 30.7rem;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5%;
+}
+
+.secao-video-player iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+.secao-video-coracaokwai {
+    rotate: -15deg;
+}
+
+.finalizacao {
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    padding: 1rem;
+}
+
+.finalizacao-texto {
+    display: none;
+}
+
+/* Pagina text */
+
+.texto {
+    min-height: 40rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    background-color: var(--cor-principal);
+}
+
+.text-secao {
+    padding: 3%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.text-secao-escrita {
+    display: flex;
+    flex-direction: column;
+}
+
+.escrita-titulo, .escrita-paragrafo {
+    font-family: "Delius", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.escrita-paragrafo {
+    font-size: 1.3rem;
+}
+
+.text-secao-imagem {
+    border-radius: 10%;
+    border: 2px solid var(--cor-paragrafos);
+}
+
+@media screen and (max-width: 1278px) {
+    /* Esconder todos os corações */
+
+    .cabecalho-navegacao-coracao, .cabecalho-navegacao-coracao-invertido {
+        display: none;
+    }
+
+    /* Reorganizar o cabeçalho */
+    .cabecalho {
+        flex-direction: column;
+        justify-content: center;
+        min-height: auto;
+        padding: 2rem 6%;
+        width: 100%;
+        min-height: 3rem;
+        gap: 1rem;
+    }
+
+
+    .cabecalho-navegacao {
+        gap: 1rem;
+        min-height: auto;
+    }
+
+    .cabecalho-navegacao-texto {
+        font-size: 3.5rem;
+        height: auto;
+    }
+
+    .cabecalho-navegacao-img {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .cabecalho-imagem-gible, .cabecalho-imagem-rebaixada {
+        display: none;
+    }
+
+    .cabecalho-navegacao-img-botao {
+        order: 1; /* Botões no meio */
+        width: 12rem;
+        font-size: 0.9rem;
+        padding: 0.8rem 0;
+        box-shadow: none;
+
+    }
+
+    /* Centralizar carrossel e vídeo */
+    .secao-imagens, .secao-video {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .secao-imagens-carrossel, .secao-video-player {
+        width: 30rem;
+        height: 23rem;
+    }
+
+    .secao-imagens-coracaokwai {
+        rotate: 0deg;
+        transform: translateY(1.8rem);
+    }
+
+    .secao-video-coracaofofo, .secao-imagens-coracaofofo {
+        rotate: 0deg;
+        transform: translateY(0rem);
+    }
+
+    .secao-video-coracaokwai {
+        display: none;
+    }
+
+    .finalizacao-texto {
+        display: block; /* Alterado para block para consistência com display: list-item */
+        font-size: 1.2rem;
+    }
+
+    .text-secao {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
