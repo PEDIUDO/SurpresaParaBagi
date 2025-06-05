@@ -267,7 +267,17 @@
     border: 2px solid var(--cor-paragrafos);
 }
 
-@media screen and (max-width: 1278px) {
+@media screen and (max-width: 1250px) and (min-width: 1060px) {
+    .cabecalho {
+        padding:0 2%;;
+    }
+
+    .coracoes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1059px) {
     /* Esconder todos os corações */
 
     .cabecalho-navegacao-coracao, .cabecalho-navegacao-coracao-invertido {
@@ -300,7 +310,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        gap: 1.5rem;
     }
 
     .cabecalho-imagem-gible, .cabecalho-imagem-rebaixada {
